@@ -29,19 +29,10 @@ const msg = () => {
                     'Boa noite, espero que tenha tido uma ótima sexta!',
                     'Boa noite, espero que tenha tido um ótimo Sábado!']]
 
-    if (hora > 5 && hora < 12) {
-        mensagem = msg[0][dia]
-    }
-    else if (hora >= 12 && hora < 18) {
-        mensagem = msg[1][dia]
-    }
-    else if (hora >= 18 && hora <= 23) {
-        mensagem = msg[2][dia]
-    }
-    else {
-        mensagem = alerta
-    }
-
+    if(hora > 5 && hora < 12) mensagem = msg[0][dia]
+    else if(hora >= 12 && hora < 18) mensagem = msg[1][dia]
+    else if(hora >= 18 && hora <= 23) mensagem = msg[2][dia]
+    else mensagem = alerta
     return mensagem
 }
 

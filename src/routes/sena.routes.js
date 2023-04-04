@@ -1,20 +1,10 @@
 import Express from "express";
-import megasena from "../functions/sena.js";
+import { mega } from "../functions/sena.js";
 
 const sena = Express()
-// home.use(Express.json)
 
-sena.get('/', (req, res) => {
-    try {
-        res.json({
-            Números: megasena()
-        })
-    } catch(e) {
-        res.json({
-            message: 'Erro na geração de número, faça uma nova requisição',
-            erro: e
-        })
-    }
-})
+sena.get('/', (req, res) => res.status(200).send({
+    Números: mega()
+}))
 
 export default sena

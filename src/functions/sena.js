@@ -1,6 +1,17 @@
 import random from './random.js'
 
-const megasena = () => {
+// refatoração
+export const mega = () => {
+    const numbers = []
+    do {
+        const num = random(1, 60)
+        if(!numbers.includes(num)) numbers.push(num)
+    } while(numbers.length < 6)
+    return numbers
+}
+
+/*
+export const megasena = () => {
 
     const array = ['01', '02', '03', '04', '05', '06']
 
@@ -23,5 +34,4 @@ const megasena = () => {
     })
     return array
 }
-
-export default megasena
+*/

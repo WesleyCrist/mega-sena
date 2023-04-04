@@ -1,3 +1,5 @@
-# Obejetivo
+# Gerador de números da mega sena
 
-Gerador de números da mega sena
+## Rotas
+
+- http:localhost:8081/sena
